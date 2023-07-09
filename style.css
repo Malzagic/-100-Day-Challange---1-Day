@@ -112,15 +112,24 @@ body {
 
 @media(max-width: 748px) {
     .wrapper {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
     }
+
+    .title h1{
+        font-size: 2rem;
+    }
+
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-column: 1;
-        grid-row: 1;
+        padding: 0;
         margin: 1rem;
+    }
+
+    .formula {
+        margin-top: 2rem;
+        align-items: flex-start;
     }
 }
 
