@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    position: relative;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    min-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    grid-column: 2;
+}
+
+.title h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2;
+    grid-row: 2;
+    padding: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.info h2 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: springgreen;
+    color: black;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.info p {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    padding: 0 .5rem;
+}
+
+.formula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formula form {
+    display: inline-flex;
+}
+
+.formula form input[type='submit'] {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: springgreen;
+    text-decoration: none;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 10px 0 0 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.formula form input[type='submit']:hover {
+    background-color: rgba(0, 255, 128, 0.7);
+}
+
+.formula form input {
+    font-size: 1rem;
+    border: 1px solid gainsboro;
+    border-radius: 0 10px 10px 0;
+    outline-color: gainsboro;
+    padding: 10px 25px;
+}
+
+
+@media(max-width: 748px) {
+    .wrapper {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 1rem;
+    }
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    min-height: 300px;
+    background-color: rgba(128, 255, 0, 1);
+    color: #333;
+    border-radius: 10px;
+}
+
+.popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    background-color: cornflowerblue;
+    color: #fff;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+.btn {
+    padding: 10px 25px;
+}
+
+.back-btn {
+    background-color: inherit;
+    color: #333;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: cornflowerblue;
+    color: #fff;
+    border: 1px solid rgba(128, 255, 0, 1);
+}
